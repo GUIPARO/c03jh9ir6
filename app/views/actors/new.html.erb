@@ -1,0 +1,50 @@
+<div style="margin: 0 auto;width: 40%;">
+<%= form_for @actor do |f| %>
+<div style=" display: flex; flex-direction: column;">
+
+<div style= "margin: 10px; display: flex; flex-direction: column;"
+  <%= f.label "Name"%>
+  <%= f.text_field :name%>
+</div>
+
+  <div style= "margin: 10px; display: flex; flex-direction: column;"
+  <%= f.label "Biografía"%>
+  <%= f.text_area :bio%>
+</div>
+
+<div style= "margin: 10px; display: flex; flex-direction: column;"
+  <%= f.label "birthday date"%>
+  <%= f.date_field :birth_date%>
+</div>
+
+<div style= "margin: 10px; display: flex; flex-direction: column;"
+  <%= f.label "birthday place"%>
+  <%= f.text_field :birth_place%>
+</div>
+
+<div style= "margin: 10px; display: flex; flex-direction: column;"
+  <%= f.label "Image"%>
+  <%= f.url_field  :image_url %>
+</div>
+
+  <div style= "margin: 10px; display: flex; flex-direction: column;"
+  <%= f.label "Is Alive?"%>
+  <%= f.select :alive, [["Yes", true], ["No", false]]%>
+  </div>
+
+  <div style= "margin: 10px; display: flex; flex-direction: column;"
+  <%= f.label "death date"%>
+  <%= f.date_field :death_date%>
+  </div>
+  
+<div style= "margin: 10px; display: flex; flex-direction: column;"
+  <%= f.label "death place"%>
+  <%= f.text_field :death_place%>
+</div>
+
+  <%= f.submit%>
+</div>
+<%end%>
+</div>
+
+
